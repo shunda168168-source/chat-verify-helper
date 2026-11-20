@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "对话核对助手",
+  "version": "1.0.3",
+  "description": "自动读取客服对话里访客提供的帐号、卡号、姓名、钱包地址，集中显示在悬浮面板，可一键复制、点击定位原消息。不上传、不保存。",
+  "content_scripts": [
+    {
+      "matches": ["*://c.bicsin.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle",
+      "all_frames": true,
+      "world": "MAIN"
+    }
+  ]
+}
